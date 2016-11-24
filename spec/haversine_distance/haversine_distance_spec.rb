@@ -23,7 +23,7 @@ describe HaversineDistance do
     let(:precision) { 2 }
 
     context 'when lat-long for both points are not same' do
-      it { expect(described_class.m(point1[0], point1[1], point2[0], point2[1], 2).round(2)).to eql(3453.65) }
+      it { expect(described_class.m(point1[0], point1[1], point2[0], point2[1]).round(2)).to eql(3453.66) }
     end
   end
 end
