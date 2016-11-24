@@ -1,0 +1,3 @@
+module HaversineDistance
+  VERSION = '0.0.1'
+end
