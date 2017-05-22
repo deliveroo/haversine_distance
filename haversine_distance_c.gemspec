@@ -2,7 +2,7 @@ require './lib/haversine_distance/version'
 
 
 Gem::Specification.new do |s|
-  s.name = 'haversine_distance'
+  s.name = 'haversine_distance_c'
   s.version = HaversineDistance::VERSION
   s.date = Date.today.to_s
   s.summary = 'C calculation of the Haversine Distance'
@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
   s.test_files                  = test_files
   s.require_paths << 'ext'
 
-  s.extensions = %w{ext/haversine_distance/extconf.rb}
+  s.extensions = %w{ext/haversine_distance_c/extconf.rb}
   s.has_rdoc = false
 
   s.add_development_dependency 'rake-compiler'

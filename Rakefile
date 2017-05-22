@@ -12,7 +12,7 @@ task :config do
   end
   # e.g. 2.13.3 becomes haversine_distance_-2.13.3.gem
   def gem_name
-    "haversine_distance-#{version}.gem"
+    "haversine_distance_c-#{version}.gem"
   end
 
   def base
@@ -30,7 +30,7 @@ end
 
 desc 'build gem'
 task :build => [:config] do
-  sh 'gem build -V haversine_distance.gemspec'
+  sh 'gem build -V haversine_distance_c.gemspec'
   if $CHILD_STATUS.success?
     FileUtils.mkdir_p(File.join(base, 'pkg'))
     FileUtils.mv(File.join(base, gem_name), 'pkg')
@@ -65,7 +65,7 @@ require 'rspec/core/rake_task'
 RSpec::Core::RakeTask.new(:spec)
 
 Rake::ExtensionTask.new('haversine_distance') do |ext|
-  ext.ext_dir = 'ext/haversine_distance'
+  ext.ext_dir = 'ext/haversine_distance_c'
 end
 
 Rake::TestTask.new(:test) do |t|
