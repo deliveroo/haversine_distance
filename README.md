@@ -8,7 +8,7 @@ Just a simple gem to compute Haversine Distance in C
 Add to your Gemfile:
 
 ```
-gem 'haversine_c', '~> 0.0.2'
+gem 'haversine_distance_c', '~> 0.0.2'
 ```
 
 Then:
